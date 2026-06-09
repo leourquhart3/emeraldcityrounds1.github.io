@@ -1,0 +1,169 @@
+/* Layout CSS */
+
+
+
+
+
+nav {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+}
+
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+nav li {
+  margin: 0;
+  font-size: 1.25rem;
+}
+nav a {
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+}
+
+.banner-carousel {
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  height: 320px;
+  overflow: hidden;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 2rem;
+}
+
+.banner-carousel .slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  animation: bannerSlide 12s infinite;
+}
+
+.banner-carousel .slide:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.banner-carousel .slide:nth-child(2) {
+  animation-delay: 4s;
+}
+
+.banner-carousel .slide:nth-child(3) {
+  animation-delay: 8s;
+}
+
+.banner-carousel .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+@keyframes bannerSlide {
+  0%, 20%, 33% {
+    opacity: 1;
+  }
+  40%, 100% {
+    opacity: 0;
+  }
+}
+
+nav span::before {
+  content: "\a";
+  white-space: pre;
+}
+.flex-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  gap: 1rem;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 1rem 0;
+}
+
+.flex-child {
+  flex: 1 1 40%;
+  min-width: 280px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flex-child:first-child {
+  width: 50%;
+}
+
+.flex-child:nth-child(2) {
+  width: 50%;
+}
+
+.flex-child:nth-child(3) {
+  width: 50%;
+}
+
+.flex-child:last-child {
+  width: 50%;
+}
+footer {
+  clear: both;
+  text-align: left;
+  padding: 15px;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-top: 20px;
+}
+
+.flex-parent-footer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: stretch;
+  gap: 1rem;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 1rem 0;
+}
+
+.flex-child-footer {
+  flex: 1 1 30%;
+  min-width: 280px;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.flex-child-footer:first-child {
+  width: 33.33%;
+}
+
+.flex-child-footer:nth-child(2) {
+  width: 33.33%;
+}
+
+.flex-child-footer:nth-child(3) {
+  width: 33.33%;
+}
+
+/* Make the top banner image span the full viewport width (full-bleed) */
+header picture,
+header picture img,
+header img {
+  display: block;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  height: auto;
+}
